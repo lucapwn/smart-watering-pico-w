@@ -13,6 +13,7 @@ Plataforma IoT para monitoramento e controle remoto de um sistema de irrigação
 - [Materiais e Tecnologias](#materiais-e-tecnologias)
   - [Conectando os componentes](#conectando-os-componentes)
   - [Diagrama Esquemático do Protótipo](#diagrama-esquemático-do-protótipo)
+  - [Fluxograma do _Firmware_](#fluxograma-do-firmware)
 - [Executando a aplicação](#executando-a-aplicação)
   - [Plataforma IoT](#plataforma-iot)
 - [Autor](#autor)
@@ -64,7 +65,7 @@ Raspberry Pi Pico W    | Microcontrolador | ApexCharts, DataTables e Ion.RangeSl
 
 ### Conectando os componentes
 
-Os GPIOs dos sensores e atuadores devem ser ligados ao Pico W da seguinte forma:
+Os GPIOs dos sensores e atuadores devem ser conectados ao Raspberry Pi Pico W da seguinte forma:
 
 Pico W | DS3231 | DHT11 | Relé | YF-S201 | HC-SR04 | TEMT6000 | YL-83 | FC-28 
 ------ | ------ | ----- | ---- | ------- | ------- | -------- | ----- | ----- 
@@ -87,6 +88,12 @@ GND    | GND    | GND   | GND  | GND     | GND     | GND      | GND   | GND
 Após conectar todos os componentes, o sistema deve ser semelhante à imagem ilustrada abaixo.
 
 <img src="https://github.com/lucapwn/smart-watering-pico-w/blob/main/images/Prototype%20Schematic%20Diagram.png" width="700">
+
+### Fluxograma do _Firmware_
+
+O fluxograma abaixo ilustra as interações do _firmware_ do Raspberry Pi Pico W com a plataforma IoT e outros recursos do sistema.
+
+<img src="https://github.com/lucapwn/smart-watering-pico-w/blob/main/images/Firmware%20Flowchart.svg" width="1000">
 
 ## Executando a aplicação
 

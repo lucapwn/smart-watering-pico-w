@@ -15,6 +15,7 @@ Plataforma IoT para monitoramento e controle remoto de um sistema de irrigação
   - [Diagrama Esquemático do Protótipo](#diagrama-esquemático-do-protótipo)
   - [Fluxograma do _Firmware_](#fluxograma-do-firmware)
 - [Executando a aplicação](#executando-a-aplicação)
+  - [Raspberry Pi Pico W](#raspberry-pi-pico-w)
   - [Plataforma IoT](#plataforma-iot)
 - [Autor](#autor)
 - [Licença](#licença)
@@ -25,7 +26,7 @@ O Smart Watering é um sistema de irrigação automatizado, sustentável e de ba
 
 Este projeto foi tema do meu Trabalho de Conclusão de Curso (TCC), com o título _“Smart Watering: Um Sistema de Monitoramento Remoto e Controle de Irrigação Sustentável Baseado em Plataforma IoT”_. Além disso, fui bolsista no projeto por um ano, que também foi aprovado e fomentado pelo [Programa Centelha](https://programacentelha.com.br/ce/) - Ceará (2022).
 
-Assista este vídeo de exemplo no YouTube em [```https://www.youtube.com/watch?v=AMdGk-LIUu8```](https://www.youtube.com/watch?v=AMdGk-LIUu8).
+Veja este vídeo de exemplo no YouTube em [```https://www.youtube.com/watch?v=AMdGk-LIUu8```](https://www.youtube.com/watch?v=AMdGk-LIUu8).
 
 ![smart-watering](https://github.com/lucapwn/smart-watering-pico-w/blob/main/images/Login%20Page.png)
 
@@ -97,6 +98,14 @@ O fluxograma abaixo ilustra as interações do _firmware_ do Raspberry Pi Pico W
 
 ## Executando a aplicação
 
+### Raspberry Pi Pico W
+
+Instale o GCC, o Visual Studio Code e a extensão Raspberry Pi Pico. Em seguida, importe o projeto ```pico_firmware``` e selecione o SDK na versão ```v1.5.1```.
+
+Edite o arquivo ```main.c```, adicionando suas credenciais de Wi-Fi e endereço IP (ou servidor). As demais configurações são opcionais.
+
+Por fim, configure o CMake, compile o projeto e faça o _upload_ do _firmware_ (```build/main.uf2```) para o Raspberry Pi Pico W.
+
 ### Plataforma IoT
 
 Com o Git instalado, clone o repositório do projeto:
@@ -129,9 +138,11 @@ Por fim, execute o servidor da aplicação:
 foo@bar:~$ python manage.py runserver 0.0.0.0:80
 ~~~
 
-Você poderá acessar a aplicação agora em seu computador em [```http://localhost```](http://localhost).
+Agora, você pode acessar a aplicação no seu computador através de [http://localhost](http://localhost).
 
-Para acessar a plataforma em outro dispositivo, será necessário obter o endereço IP do computador que está executando esta aplicação.
+Para usá-la em outro dispositivo, obtenha o endereço IP do computador que está executando a aplicação.
+
+Se tudo estiver configurado corretamente, os dados dos sensores serão exibidos, em tempo real, na plataforma. Obrigado por chegar até aqui!
 
 ## Autor
 

@@ -1,6 +1,8 @@
 # Smart Watering
 
-Plataforma IoT para monitoramento e controle remoto de um sistema de irrigação sustentável desenvolvido com o Raspberry Pi Pico W.
+O Smart Watering é uma plataforma IoT para monitoramento e controle remoto de um sistema de irrigação sustentável desenvolvido com o Raspberry Pi Pico W.
+
+Este é o projeto final destinado à Unidade 7 do [EmbarcaTech](https://embarcatech.ifce.edu.br/), um programa de capacitação profissional técnica destinado a alunos de nível superior em Tecnologias da Informação e Comunicação (TIC) e áreas correlatas, focado em tecnologias de Sistemas Embarcados.
 
 ![Badge](https://img.shields.io/static/v1?label=license&message=MIT&color=1E90FF)
 ![Badge](https://img.shields.io/static/v1?label=build&message=passing&color=00d110)

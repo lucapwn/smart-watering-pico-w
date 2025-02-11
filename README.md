@@ -104,7 +104,11 @@ O fluxograma abaixo ilustra as interações do _firmware_ do Raspberry Pi Pico W
 
 Instale o GCC, o Visual Studio Code e a extensão Raspberry Pi Pico. Em seguida, importe o projeto ```pico_firmware``` e selecione o SDK na versão ```v1.5.1```.
 
-Edite o arquivo ```main.c```, adicionando suas credenciais de Wi-Fi e endereço IP (ou servidor). As demais configurações são opcionais.
+Edite o arquivo ```main.c```, adicionando suas credenciais de Wi-Fi, endereço IP (ou servidor) e a configuração de data e hora do módulo RTC.
+
+Na função ```main()```, execute ```ds3231_configure_time()``` apenas uma vez. Depois, comente essa função e recompile o _firmware_ para salvar a data e hora local na variável ```ds3231_data```.
+
+As demais configurações são opcionais.
 
 Por fim, configure o CMake, compile o projeto e faça o _upload_ do _firmware_ (```build/main.uf2```) para o Raspberry Pi Pico W.
 
@@ -144,7 +148,9 @@ Agora, você pode acessar a aplicação no seu computador através de [http://lo
 
 Para usá-la em outro dispositivo, obtenha o endereço IP do computador que está executando a aplicação.
 
-Se tudo estiver configurado corretamente, os dados dos sensores serão exibidos, em tempo real, na plataforma. Obrigado por chegar até aqui!
+Se tudo estiver configurado corretamente, os dados dos sensores serão exibidos, em tempo real, na plataforma.
+
+Obrigado por chegar até aqui!
 
 ## Autor
 
